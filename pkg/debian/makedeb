@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+basepath="$( cd "$(dirname "$0")" ; pwd -P )"
+
+# prepare source
+rm -rf "${basepath}/source" && mkdir -p "${basepath}/source"
+cp -r "${basepath}/../../board.bin" "${basepath}/source/"
+cp -r "${basepath}/../../ath10k.conf" "${basepath}/source/"
+cp -r "${basepath}/debian" "${basepath}/source/"
+
+# build package
+cd "${basepath}/source"
+dpkg-buildpackage -b -us -uc

@@ -1,0 +1,9 @@
+Source: surface-ath10k-firmware-override
+Section: misc
+Priority: optional
+Maintainer: Maximilian Luz <luzmaximilian@gmail.com>
+Build-Depends: build-essential, debhelper (>= 9)
+
+Package: surface-ath10k-firmware-override
+Architecture: all
+Description: Firmware override for Surface devices with QCA6174 ATH10K WiFi chip
