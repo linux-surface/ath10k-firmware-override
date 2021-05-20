@@ -1,0 +1,5 @@
+#!/usr/bin/dh-exec
+
+board.bin => lib/firmware/ath10k/QCA6174/hw2.1/board-override.bin
+board.bin => lib/firmware/ath10k/QCA6174/hw3.0/board-override.bin
+ath10k.conf => lib/modprobe.d/ath10k.conf
