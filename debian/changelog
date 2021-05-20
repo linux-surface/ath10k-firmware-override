@@ -1,3 +1,11 @@
+surface-ath10k-firmware-override (20210520-1) unstable; urgency=medium
+
+  * Move package scripts out of pkg dir.
+  * Use *.install files to install files
+  * Use debhelper-compat buildreq instead of debian/compat file
+
+ -- Dorian Stoll <dorian.stoll@tmsp.io>  Thu, 20 May 2021 07:10:03 +0200
+
 surface-ath10k-firmware-override (20210519-1) unstable; urgency=medium
 
   * Initial release.

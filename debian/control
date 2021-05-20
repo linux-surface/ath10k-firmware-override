@@ -2,7 +2,10 @@ Source: surface-ath10k-firmware-override
 Section: misc
 Priority: optional
 Maintainer: Maximilian Luz <luzmaximilian@gmail.com>
-Build-Depends: build-essential, debhelper (>= 9)
+Build-Depends:
+ build-essential,
+ debhelper-compat (= 9),
+ dh-exec
 
 Package: surface-ath10k-firmware-override
 Architecture: all
