@@ -7,6 +7,7 @@ arch=(any)
 pkgdesc="Firmware override for Surface devices with QCA6174 ATH10K WiFi Chip"
 url="http://github.com/linux-surface/ath10k-firmware-override"
 license=('custom')
+depends=('linux-surface')
 
 source=(
     board.bin
