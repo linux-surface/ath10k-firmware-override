@@ -8,5 +8,6 @@ Build-Depends:
  dh-exec
 
 Package: surface-ath10k-firmware-override
+Depends: linux-image-surface
 Architecture: all
 Description: Firmware override for Surface devices with QCA6174 ATH10K WiFi chip

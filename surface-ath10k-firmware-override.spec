@@ -12,6 +12,8 @@ License: proprietary
 Source0: board.bin
 Source1: ath10k.conf
 
+Requires: kernel-surface
+
 %description
 Firmware override for Surface devices with QCA6174 ATH10K WiFi chip,
 specifically the Surface Go series and AMD Surface Laptops.
