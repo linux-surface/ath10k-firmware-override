@@ -1,3 +1,9 @@
+surface-ath10k-firmware-override (20211020-1) unstable; urgency=medium
+
+  * Use proper board-2.bin file created by Hans de Goede
+
+ -- Maximilian Luz <luzmaximilian@gmail.com>  Wed, 20 Oct 2021 19:13:52 +0200
+
 surface-ath10k-firmware-override (20210520-1) unstable; urgency=medium
 
   * Move package scripts out of pkg dir.
