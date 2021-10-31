@@ -1,3 +1,9 @@
+surface-ath10k-firmware-override (20211031-1) unstable; urgency=medium
+
+  * Bump package version
+
+ -- Maximilian Luz <luzmaximilian@gmail.com>  Sun, 31 Oct 2021 22:44:33 +0100
+
 surface-ath10k-firmware-override (20211020-1) unstable; urgency=medium
 
   * Use proper board-2.bin file created by Hans de Goede
