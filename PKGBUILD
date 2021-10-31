@@ -1,7 +1,7 @@
 # Maintainer: Maximilian Luz <luzmaximilian@gmail.com>
 
 pkgname=surface-ath10k-firmware-override
-pkgver=20211031
+pkgver=20211020
 pkgrel=1
 arch=(any)
 pkgdesc="Firmware override for Surface devices with QCA6174 ATH10K WiFi Chip"
