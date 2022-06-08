@@ -204,7 +204,7 @@ jobs:
     name: Update Arch Linux package repository
     needs: [release]
     runs-on: ubuntu-latest
-    container: qzed/archlinux
+    container: archlinux/archlinux
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
