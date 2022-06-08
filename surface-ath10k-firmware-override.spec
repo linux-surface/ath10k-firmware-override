@@ -2,7 +2,7 @@
 
 Name: surface-ath10k-firmware-override
 Summary: Firmware override for Surface devices with QCA6174 ATH10K WiFi chip
-Version: 20211031
+Version: 20220608
 Release: 1
 
 URL: https://github.com/linux-surface/ath10k-firmware-override

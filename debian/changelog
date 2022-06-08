@@ -1,3 +1,9 @@
+surface-ath10k-firmware-override (20220608-1) unstable; urgency=medium
+
+  * Add support for Go 1 with LTE/WiFi combo unit
+
+ -- Maximilian Luz <luzmaximilian@gmail.com>  Wed, 08 Jun 2022 19:31:19 +0200
+
 surface-ath10k-firmware-override (20211031-1) unstable; urgency=medium
 
   * Bump package version
