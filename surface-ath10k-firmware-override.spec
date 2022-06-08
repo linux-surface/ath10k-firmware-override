@@ -13,6 +13,7 @@ Source0: board-2.bin
 Source1: ath10k.conf
 
 Requires: kernel-surface
+BuildRequires: systemd-rpm-macros
 
 %description
 Firmware override for Surface devices with QCA6174 ATH10K WiFi chip,
