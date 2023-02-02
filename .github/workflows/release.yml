@@ -17,7 +17,7 @@ jobs:
     container: archlinux/archlinux
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Install dependencies
       run: $SCRIPTS/pkg-arch.sh install
@@ -35,7 +35,7 @@ jobs:
       run: $SCRIPTS/pkg-arch.sh release
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: arch-latest
         path: release
@@ -46,7 +46,7 @@ jobs:
     container: debian:buster
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Install dependencies
       run: $SCRIPTS/pkg-debian.sh install
@@ -64,7 +64,7 @@ jobs:
       run: $SCRIPTS/pkg-debian.sh release
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: debian-latest
         path: release
@@ -77,7 +77,7 @@ jobs:
       options: --security-opt seccomp=unconfined
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Install build dependencies
       run: $SCRIPTS/pkg-fedora.sh install
@@ -95,7 +95,7 @@ jobs:
       run: $SCRIPTS/pkg-fedora.sh release
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: fedora-36-latest
         path: release
@@ -108,7 +108,7 @@ jobs:
       options: --security-opt seccomp=unconfined
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Install build dependencies
       run: $SCRIPTS/pkg-fedora.sh install
@@ -126,7 +126,7 @@ jobs:
       run: $SCRIPTS/pkg-fedora.sh release
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: fedora-35-latest
         path: release
@@ -137,7 +137,7 @@ jobs:
     container: fedora:34
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Install build dependencies
       run: $SCRIPTS/pkg-fedora.sh install
@@ -155,7 +155,7 @@ jobs:
       run: $SCRIPTS/pkg-fedora.sh release
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: fedora-34-latest
         path: release
@@ -167,32 +167,37 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download Debian artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: debian-latest
+        path: debian-latest
 
     - name: Download Arch Linux artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: arch-latest
+        path: arch-latest
 
     - name: Download Fedora 36 artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: fedora-36-latest
+        path: fedora-36-latest
 
     - name: Download Fedora 35 artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: fedora-35-latest
+        path: fedora-35-latest
 
     - name: Download Fedora 34 artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: fedora-34-latest
+        path: fedora-34-latest
 
     - name: Upload assets
-      uses: svenstaro/upload-release-action@v1-release
+      uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: ./*-latest/*
@@ -207,12 +212,13 @@ jobs:
     container: archlinux/archlinux
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Download artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: arch-latest
+        path: arch-latest
 
     - name: Update repository
       env:
@@ -227,12 +233,13 @@ jobs:
     container: debian:buster
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Download artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: debian-latest
+        path: debian-latest
 
     - name: Update repository
       env:
@@ -249,12 +256,13 @@ jobs:
       options: --security-opt seccomp=unconfined
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Download artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: fedora-36-latest
+        path: fedora-36-latest
 
     - name: Update repository
       env:
@@ -271,12 +279,13 @@ jobs:
       options: --security-opt seccomp=unconfined
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Download artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: fedora-35-latest
+        path: fedora-35-latest
 
     - name: Update repository
       env:
@@ -291,12 +300,13 @@ jobs:
     container: fedora:34
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Download artifacts
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
       with:
         name: fedora-34-latest
+        path: fedora-34-latest
 
     - name: Update repository
       env:
