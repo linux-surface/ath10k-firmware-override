@@ -1,5 +1,7 @@
 # Firmware override for Surface devices with QCA6174 ATH10K WiFi Chip
 
+_Note: This should no longer be required with up-to-date firmware from the official linux-firmware repository._
+
 Firmware override for Surface devices with QCA6174 ATH10K WiFi chip,
 specifically the Surface Go devices and the AMD Surface Laptops.
 
